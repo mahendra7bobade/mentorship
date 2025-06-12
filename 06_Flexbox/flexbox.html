@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Masterclass Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row; /* Change to column for vertical layout */
+            justify-content: space-between; /* Adjust alignment */
+            align-items: center; /* Center items vertically */
+            height: 100vh; /* Full viewport height */
+        }
+        .item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            flex-grow: 1; /* Allow items to grow equally */
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <strong>Flexbox Masterclass Demo</strong> - This is a simple demonstration of Flexbox layout. The items are arranged in a row and will adjust their size based on the available space.
+
+        </p>
+
+    <div class="container">
+        <div class="item">Item 1</div>      
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>  
+        <div class="item">Item 4</div>
+    </div>
+    <p>
+        <strong>Note:</strong> You can change the <code>flex-direction</code> property in the CSS to <code>column</code> to see how the layout changes to a vertical arrangement.
+    </p>
+    <p>
+        <strong>Resources:</strong> For more information on Flexbox, check out the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS Tricks Flexbox Guide</a>.
+    </p>
+    <p>
+        <strong>Feedback:</strong> If you have any questions or feedback, feel free to reach out!       
+<p>
+        
+</p>
+</body>
+</html>
