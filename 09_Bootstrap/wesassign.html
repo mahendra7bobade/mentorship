@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube website</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .box {
+        width: 30%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #d73434;
+        padding: 20px;
+        text-align: center;
+      }
+      main {
+        padding: 20px;
+      }
+      .video {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #df2a2a;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        border: none;
+      }
+      .btn:hover {
+        background: #5e0b0b;
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #f1f1f1;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      p {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to YouTube</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Featured Videos</h2>
+        <div class="container">
+          <div class="box">
+            <img
+              src="https://cdn.pixabay.com/photo/2022/11/27/01/47/boat-7618814_1280.jpg"
+              alt="image"
+              width="100%"
+            />
+            <h3>Best places to visit in India</h3>
+            <p>Top 5 places to visit in India must try</p>
+            <button
+              onclick="location.href='https://www.youtube.com/shorts/n4sn4SkDncw'"
+              class="btn"
+              target="_blank"
+            >
+              Watch Now
+            </button>
+          </div>
+          <div class="box">
+            <img
+              src="https://cdn.pixabay.com/photo/2025/05/30/17/15/mountain-9631829_1280.jpg"
+              alt="USA"
+              width="100%"
+            />
+
+            <h3>Best places to visit in USA</h3>
+            <p>Top 5 places to visit in USA must try</p>
+            <button
+              onclick="location.href='https://www.youtube.com/shorts/U7P4fX3yBoA'"
+              class="btn"
+              target="_blank"
+            >
+              Watch Now
+            </button>
+          </div>
+          <div class="box">
+            <img
+              src="https://cdn.pixabay.com/photo/2023/03/19/10/12/skyline-7862200_1280.jpg"
+              alt="UK"
+              width="100%"
+            />
+
+            <h3>Best places to visit in UK</h3>
+            <p>Top 5 places to visit in UK must try</p>
+            <button
+              onclick="location.href='https://www.youtube.com/shorts/OPrR3k5iG3M'"
+              class="btn"
+            >
+              Watch Now
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Youtube. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
