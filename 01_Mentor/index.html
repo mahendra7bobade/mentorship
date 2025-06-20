@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto 1fr auto;
+        gap: 10px;
+        height: 100vh;
+      }
+      .box {
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+      }
+      .box:nth-child(1) {
+        background-color: #4caf50; /* Header */
+      }
+      .box:nth-child(2) {
+        background-color: #2196f3; /* Sidebar */
+      }
+      .box:nth-child(3) {
+        background-color: #ff9800; /* Main Content */
+      }
+      .box:nth-child(4) {
+        background-color: #446d94; /* Footer */
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="grid-container"
+      style="
+        grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';
+      "
+    >
+      <div class="box" style="grid-area: header">Header</div>
+      <div class="box" style="grid-area: sidebar">Sidebar</div>
+      <div class="box" style="grid-area: main">Main Content</div>
+      <div class="box" style="grid-area: footer">Footer</div>
+    </div>
+  </body>
+</html>
