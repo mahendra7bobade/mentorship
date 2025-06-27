@@ -5,47 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website</title>
     <style>
+      .submenu {
+        display: none;
+        margin-left: 20px;
+        margin-top: 4px;
+      }
+      .sidebar a.has-submenu::after {
+        content: " ▼";
+        font-size: 0.8em;
+      }
+      .sidebar a.active {
+        color: #2196f3;
+        font-weight: bold;
+      }
       body {
         margin: 0;
         font-family: Arial, sans-serif;
+        background: #f4f4f8;
       }
       .grid-container {
         display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-template-rows: auto 1fr auto;
-        gap: 10px;
+        grid-template-rows: 80px 1fr 80px;
         height: 100vh;
       }
-      .box {
-        padding: 20px;
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
+      .header {
+        grid-row: 1 / 2;
+        background: #4638d1;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
       }
-      .box:nth-child(1) {
-        background-color: #4caf50; /* Header */
+      .header-left {
+        display: flex;
+        align-items: center;
       }
-      .box:nth-child(2) {
-        background-color: #2196f3; /* Sidebar */
+      .logo-circle {
+        width: 48px;
+        height: 48px;
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #4638d1;
+        font-size: 16px;
+        margin-right: 18px;
+        border: 2px solid #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
       }
-      .box:nth-child(3) {
-        background-color: #ff9800; /* Main Content */
+      .site-title {
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
       }
-      .box:nth-child(4) {
-        background-color: #446d94; /* Footer */
+      .header-nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 32px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .header-nav a:hover {
+        color: #d1d1ff;
+      }
+      .main-area {
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 0;
+      }
+      .sidebar {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+        padding: 32px 28px;
+        margin-right: 32px;
+        min-width: 220px;
+        max-width: 260px;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .sidebar-title {
+        color: #4638d1;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 18px;
+      }
+      .sidebar a {
+        color: #4638d1;
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin-bottom: 14px;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .sidebar a:hover {
+        color: #2196f3;
+      }
+      .main-content {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+        padding: 32px 36px;
+        min-width: 420px;
+        flex: 1;
+      }
+      .main-content h1 {
+        color: #4638d1;
+        font-size: 2rem;
+        margin-top: 0;
+        margin-bottom: 18px;
+      }
+      .footer {
+        grid-row: 3 / 4;
+        background: #232837;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.07);
+        padding: 0 20px;
+      }
+      .footer-text {
+        margin: 18px 0 6px 0;
+        font-size: 1.1rem;
+      }
+      .footer-links {
+        margin-bottom: 12px;
+      }
+      .footer-links a {
+        color: #bfc7d5;
+        text-decoration: none;
+        margin: 0 8px;
+        font-size: 1rem;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: #fff;
+      }
+      @media (max-width: 900px) {
+        .main-area {
+          flex-direction: column;
+          align-items: stretch;
+          padding: 20px 0;
+        }
+        .sidebar {
+          margin-right: 0;
+          margin-bottom: 24px;
+          min-width: unset;
+          max-width: unset;
+          width: 100%;
+        }
+        .main-content {
+          min-width: unset;
+          width: 100%;
+        }
       }
     </style>
   </head>
   <body>
-    <div
-      class="grid-container"
-      style="
-        grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';
-      "
-    >
-      <div class="box" style="grid-area: header">Header</div>
-      <div class="box" style="grid-area: sidebar">Sidebar</div>
-      <div class="box" style="grid-area: main">Main Content</div>
-      <div class="box" style="grid-area: footer">Footer</div>
+    <div class="grid-container">
+      <header class="header">
+        <div class="header-left">
+          <div class="logo-circle">Logo</div>
+          <span class="site-title">My Website</span>
+        </div>
+        <nav class="header-nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+      <main class="main-area">
+        <aside class="sidebar">
+          <div class="sidebar-title">Navigation</div>
+          <a href="#" class="has-submenu">Dashboard</a>
+          <div class="submenu">
+            <a href="#" onclick="showAlert('Overview')">Overview</a>
+            <a href="#" onclick="showAlert('Stats')">Stats</a>
+          </div>
+          <a href="#" onclick="showAlert('Users')">Users</a>
+          <a href="#" class="has-submenu">Support</a>
+          <div class="submenu">
+            <a href="#" onclick="showAlert('FAQ')">FAQ</a>
+            <a href="#" onclick="showAlert('Contact Support')"
+              >Contact Support</a
+            >
+          </div>
+          <a href="#">Raise ticket</a>
+          <a href="#">CPanel</a>
+        </aside>
+        <section class="main-content">
+          <h1>Main Content Area!</h1>
+          <p>This is where the primary content of your web page will reside.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            reiciendis quo dicta? Deleniti dolores laborum totam inventore ex?
+            Ab mollitia est deserunt nesciunt dolorem. Itaque quam vel modi
+            mollitia dolor.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            reiciendis quo dicta? Deleniti dolores laborum totam inventore ex?
+            Ab mollitia est deserunt nesciunt dolorem. Itaque quam vel modi
+            mollitia dolor.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            rerum voluptates, ipsum quisquam provident deleniti beatae cum
+            dolores impedit natus enim omnis temporibus qui sequi? Quasi,
+            cumque. Doloribus, voluptates. Quisquam, cumque. Doloribus,
+            voluptates. Quisquam, cumque. Doloribus, voluptates. Quisquam,
+            cumque. Doloribus,
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea natus
+            quos laborum hic harum. Laboriosam, doloribus rem blanditiis ea
+            reiciendis quas ullam vero minima nisi ad. Soluta ipsam consequatur
+            harum.
+          </p>
+        </section>
+      </main>
+      <script>
+        function showAlert(section) {
+          alert("You clicked on " + section + "!");
+        }
+      </script>
+      <footer class="footer">
+        <div class="footer-text">
+          &copy; 2025 My Website. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a> |
+          <a href="#">Terms of Service</a>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
