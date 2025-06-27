@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website</title>
     <style>
+<<<<<<< HEAD
       .submenu {
         display: none;
         margin-left: 20px;
@@ -18,6 +19,21 @@
         color: #2196f3;
         font-weight: bold;
       }
+=======
+        .submenu {
+    display: none;
+    margin-left: 20px;
+    margin-top: 4px;
+  }
+  .sidebar a.has-submenu::after {
+    content: " ▼";
+    font-size: 0.8em;
+  }
+  .sidebar a.active {
+    color: #2196f3;
+    font-weight: bold;
+  }
+>>>>>>> ec655f82f234661457506afb4c1992ec6c5dc1d1
       body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -37,7 +53,11 @@
         justify-content: space-between;
         padding: 0 40px;
         border-radius: 0 0 10px 10px;
+<<<<<<< HEAD
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+=======
+        box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+>>>>>>> ec655f82f234661457506afb4c1992ec6c5dc1d1
       }
       .header-left {
         display: flex;
@@ -56,7 +76,11 @@
         font-size: 16px;
         margin-right: 18px;
         border: 2px solid #fff;
+<<<<<<< HEAD
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+=======
+        box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+>>>>>>> ec655f82f234661457506afb4c1992ec6c5dc1d1
       }
       .site-title {
         font-size: 2rem;
@@ -84,7 +108,11 @@
       .sidebar {
         background: #fff;
         border-radius: 12px;
+<<<<<<< HEAD
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+=======
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+>>>>>>> ec655f82f234661457506afb4c1992ec6c5dc1d1
         padding: 32px 28px;
         margin-right: 32px;
         min-width: 220px;
@@ -114,7 +142,11 @@
       .main-content {
         background: #fff;
         border-radius: 12px;
+<<<<<<< HEAD
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+=======
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+>>>>>>> ec655f82f234661457506afb4c1992ec6c5dc1d1
         padding: 32px 36px;
         min-width: 420px;
         flex: 1;
@@ -134,7 +166,11 @@
         align-items: center;
         justify-content: center;
         border-radius: 0 0 10px 10px;
+<<<<<<< HEAD
         box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.07);
+=======
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
+>>>>>>> ec655f82f234661457506afb4c1992ec6c5dc1d1
         padding: 0 20px;
       }
       .footer-text {
@@ -188,6 +224,7 @@
         </nav>
       </header>
       <main class="main-area">
+<<<<<<< HEAD
         <aside class="sidebar">
           <div class="sidebar-title">Navigation</div>
           <a href="#" class="has-submenu">Dashboard</a>
@@ -235,10 +272,37 @@
             reiciendis quas ullam vero minima nisi ad. Soluta ipsam consequatur
             harum.
           </p>
+=======
+       
+<aside class="sidebar">
+  <div class="sidebar-title">Navigation</div>
+  <a href="#" class="has-submenu">Dashboard</a>
+  <div class="submenu">
+    <a href="#" onclick="showAlert('Overview')">Overview</a>
+    <a href="#" onclick="showAlert('Stats')">Stats</a>
+  </div>
+  <a href="#" onclick="showAlert('Users')">Users</a>
+  <a href="#" class="has-submenu">Support</a>
+  <div class="submenu">
+    <a href="#" onclick="showAlert('FAQ')">FAQ</a>
+    <a href="#" onclick="showAlert('Contact Support')">Contact Support</a>
+  </div>
+  <a href="#">Raise ticket</a>
+  <a href="#">CPanel</a>
+</aside>
+        <section class="main-content">
+          <h1>Main Content Area!</h1>
+          <p>This is where the primary content of your web page will reside.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi reiciendis quo dicta? Deleniti dolores laborum totam inventore ex? Ab mollitia est deserunt nesciunt dolorem. Itaque quam vel modi mollitia dolor.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi reiciendis quo dicta? Deleniti dolores laborum totam inventore ex? Ab mollitia est deserunt nesciunt dolorem. Itaque quam vel modi mollitia dolor.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos rerum voluptates, ipsum quisquam provident deleniti beatae cum dolores impedit natus enim omnis temporibus qui sequi? Quasi, cumque. Doloribus, voluptates. Quisquam, cumque. Doloribus, voluptates. Quisquam, cumque. Doloribus, voluptates. Quisquam, cumque. Doloribus, </p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea natus quos laborum hic harum. Laboriosam, doloribus rem blanditiis ea reiciendis quas ullam vero minima nisi ad. Soluta ipsam consequatur harum.</p>
+>>>>>>> ec655f82f234661457506afb4c1992ec6c5dc1d1
         </section>
       </main>
       <script>
         function showAlert(section) {
+<<<<<<< HEAD
           alert("You clicked on " + section + "!");
         }
       </script>
@@ -248,9 +312,22 @@
         </div>
         <div class="footer-links">
           <a href="#">Privacy Policy</a> |
+=======
+          alert('You clicked on ' + section + '!');
+        }
+      </script>
+      <footer class="footer">
+        <div class="footer-text">&copy; 2025 My Website. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a> | 
+>>>>>>> ec655f82f234661457506afb4c1992ec6c5dc1d1
           <a href="#">Terms of Service</a>
         </div>
       </footer>
     </div>
   </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> ec655f82f234661457506afb4c1992ec6c5dc1d1
